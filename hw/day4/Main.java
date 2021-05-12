@@ -29,6 +29,18 @@ public class Main {
 
         giaiPTBac2 ptb2 = new giaiPTBac2();
         ptb2.giaiPTBac2(a,b,c);
+
+        //Bài 3: Tính cạnh tam giác:
+        System.out.println("----- Bài 3 ----------");
+        double x1, x2, x3;
+        System.out.println("Nhập 3 độ dài 3 cạnh: ");
+        x1 = scanner.nextDouble();
+        x2 = scanner.nextDouble();
+        x3 = scanner.nextDouble();
+
+        CanhTamGiac tamgiac = new CanhTamGiac();
+        tamgiac.TinhCanhTamGiac(x1, x2, x3);
+
     }
 }
 
