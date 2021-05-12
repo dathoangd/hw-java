@@ -1,9 +1,5 @@
 package src;
 
-import hw.day4.DayOfMonth;
-
-import java.time.Month;
-
 public class Main {
     public static void main(String[] args) {
 
