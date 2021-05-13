@@ -3,8 +3,7 @@ package hw.day4;
 import java.util.Scanner;
 
 public class CalculatorDayOfMonth {
-    int Month(int month) {
-
+    public void Month(int month) {
         Scanner scanner = new Scanner(System.in);
         // Sử dụng switch
 
@@ -43,7 +42,9 @@ public class CalculatorDayOfMonth {
             default:
                 System.out.println("Nhập tháng không hợp lệ.");
         }
-
+    }
+    void MonthIf(int month){
+        Scanner scanner = new Scanner(System.in);
         // Sử dụng if else
         System.out.println("Sử dụng if-else");
         if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
@@ -62,8 +63,6 @@ public class CalculatorDayOfMonth {
         } else {
             System.out.println("Tháng nhập không hợp lệ");
         }
-
-        return month;
     }
 
 }

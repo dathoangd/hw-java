@@ -15,5 +15,4 @@ public class CanhTamGiac {
             System.out.println("Đây không phải tam giác");
         }
     }
-
 }

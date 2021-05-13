@@ -10,11 +10,14 @@ public class Main {
         System.out.println("------Bài 1------");
         int month;
         Scanner scanner = new Scanner(System.in);
-
         System.out.println("Mời bạn nhập tháng: ");
         month = scanner.nextInt();
+
         CalculatorDayOfMonth dom = new CalculatorDayOfMonth();
+
         dom.Month(month);
+        dom.MonthIf(month);
+
 
         // Bài 2: Phương trình bậc 2
         System.out.println("------Bài 2----------");
