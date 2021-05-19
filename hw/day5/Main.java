@@ -1,5 +1,6 @@
 package hw.day5;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -56,7 +57,6 @@ public class Main {
 
         System.out.println(" \n");
         System.out.println("----");
-
         System.out.println("Use do - while - n số fibonacci đầu tiên");
         int ax = 1;
         do {
@@ -71,6 +71,18 @@ public class Main {
         System.out.print("Nhập n = ");
         int fac = scanner.nextInt();
         System.out.println("Giai thừa của " + fac + " là "  + FactorialCalculator.FactorialCalculator(fac));
+
+        //Bài 4
+
+        System.out.println("Random number");
+        Random ran = new Random();
+        int ranNum = ran.nextInt(10);
+        if (PrimeNumber.isPrimeNumber(ranNum)){
+            System.out.println(ranNum + " là số nguyên tố");
+        }
+        else System.out.println(ranNum + " không là số nguyên tố");
+
+        System.out.println("Giai thừa của " + ranNum + " là:  " + FactorialCalculator.FactorialCalculator(ranNum));
 
     }
 }
