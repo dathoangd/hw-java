@@ -1,5 +1,6 @@
 package hw.day7;
 
+import javax.sound.midi.Soundbank;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -20,13 +21,25 @@ public class Main {
         System.out.print("Các phần tử của mảng: ");
         ArrayB1.show(arr);
 
-        int[] maxArr = Arrays.copyOf (arr, n);
+        int[] maxArr = Arrays.copyOf(arr, n);
         int max = ArrayB1.Max(maxArr);
-        int indexOfMax = ArrayB1.searchElement(arr, max);
 
+       /* int count = 0;
+        for (int i = 0; i < n; i++){
+            if (max==arr[i]){
+                count++;
+            }
+            System.out.println(ArrayB1.searchElement(arr, i));
+        }
+        System.out.println("Mảng có " + count + " phần tử lớn nhất");*/
+        System.out.print("\nGiá trị lớn nhất của mảng là: " + max);
+        System.out.print("\nVị trí của giá trị max trong mảng là: ");
 
-        System.out.print("\nPhần tử lớn nhất của mảng là: " + max);
-        System.out.print("\nVị trí của giá trị max trong mảng là: " + indexOfMax);
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == max) {
+                System.out.print(i+1 + "\t");
+            }
+        }
 
         int[] arr2nd = Arrays.copyOf (arr, n);
         int  i, c;

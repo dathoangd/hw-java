@@ -12,6 +12,7 @@ public class ArrayB1 {
             if (max < j) {
                 max = j;
             }
+
         }
         return max;
     }
