@@ -1,5 +1,6 @@
 package hw.day9;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -7,12 +8,26 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số bài để hiển thị: ");
+        System.out.println("11. Phân tích số nguyên thành tích các số nguyên tố");
         System.out.println("12. Nhập a,b giải phương trình bậc nhất");
         System.out.println("13. Đếm số chia hết cho 3 từ 0 đến số đích");
         System.out.println("14. Kiểm tra số âm dương");
         System.out.println("15. Đếm số lần xuất hiện 1 ký tự trong chuỗi");
         int casee = sc.nextInt();
+
         switch (casee) {
+            case 11:
+                System.out.println("Nhập só nguyên cần phân tích: ");
+                int positiveNumber = sc.nextInt();
+                List<Integer> listNumbers = Ex11.positiveInt(positiveNumber);
+                System.out.printf("Kết quả: %d = ", positiveNumber);
+                int size = listNumbers.size();
+                for (int i = 0; i < size - 1; i++) {
+                    System.out.print(listNumbers.get(i) + " x ");
+                }
+                System.out.print(listNumbers.get(size - 1));
+                break;
+
             case 12: //giải phương trình bậc nhất
                 System.out.println("Nhập value bậc 1: ");
                 int aNumber = sc.nextInt();
@@ -20,6 +35,7 @@ public class Main {
                 int bNumber = sc.nextInt();
                 Ex12.equation(aNumber, bNumber);
                 break;
+
             case 13: //đếm số chia hết cho 3 từ 0 đến số nhập vào
                 System.out.println("Nhập số đích: ");
                 int destination = sc.nextInt();
